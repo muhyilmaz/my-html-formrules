@@ -46,3 +46,12 @@ function HasSpecialCharacter(str) {
     const specialCharacters = /[!#$%^&*?_\-,.]/;
     return specialCharacters.test(str);
 }
+
+$(".bi-lowercase-input").on("input", function (e) {
+    let inputValue = $(this).val();
+    $(this).val(inputValue.toLocaleLowerCase('tr-TR'));
+});
+$(".bi-uppercase-input").on("input", function (e) {
+    let inputValue = $(this).val();
+    $(this).val(inputValue.toLocaleUpperCase('tr-TR'));
+});
